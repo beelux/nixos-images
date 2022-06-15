@@ -27,7 +27,7 @@ build_kexec_bundle() {
 }
 
 main() {
-  declare -r tag=${1:-nixos-unstable} arch=${2:-x86_64-linux}
+  declare -r tag=${1:-nixos-unstable} arch=${2:-aarch64-linux}
   tmp="$(mktemp -d)"
   trap 'rm -rf -- "$tmp"' EXIT
   readarray -t assets < <(
